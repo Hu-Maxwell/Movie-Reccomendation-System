@@ -3,6 +3,7 @@ name: deploy website to aws
 on:
     push:
         branches: 
+            - main
             - cd-test
         paths:
             - 'frontend/**'
@@ -27,9 +28,6 @@ jobs:
             - name: build
               working-directory: frontend
               run: npm run build
-
-            - name: List frontend folder after build
-              run: ls -R frontend
             
             - name: set aws credentials
               uses: aws-actions/configure-aws-credentials@v5.0.0
