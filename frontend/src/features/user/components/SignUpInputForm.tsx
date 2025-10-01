@@ -4,9 +4,8 @@ type InputProps = {
 }
 
 // This is a reusable component that creates the user input fields
-// It allows you to input the form name, the text appearing above the input field
-// and display it
-// to use this component
+// It allows you to input the form name, the label appearing above the input field
+// to use this component import it like "<SignUpInputForm label="username" />"
 const SignUpInputForm = ({label /*add more dependencies, comma seperated */ }: InputProps) => {
     return (
         <main className="mb-4 bg-white">
@@ -14,7 +13,7 @@ const SignUpInputForm = ({label /*add more dependencies, comma seperated */ }: I
                 {label}
             </label>
             <input
-                type="text" // can also declare 
+                type="text"
                 placeholder="" // what they see when no text is inputted
                 className="" // styling
             />
