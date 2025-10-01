@@ -2,6 +2,7 @@ import { useState } from "react"
 import reactLogo from '../../../shared/assets/react.svg'
 import viteLogo from '../../../shared/assets/vite.svg'
 import '../../../shared/styles/App.css'
+import SignUpInputForm from "../../user/components/SignUpInputForm"
 
 export default function HomePage() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,8 @@ export default function HomePage() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
+            <SignUpInputForm form_name="hi"/>
+
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
